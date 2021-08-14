@@ -1,11 +1,16 @@
 S = list(input())
-for i in range(len(S)):
-    S[i] = ord(S[i])
+alpahbet = list('abcdefghijklmnopqrstuvwxyz')
+dic = {}
 
-print(S)
+#a-z 딕셔너리에 대한 value값 -1로 초기화
+for i in alpahbet:
+    dic[i] = -1
 
-for i in range(97, 123):
-    if i in S:
-        print(i)
-    else:
-        print(-1)
+#처음 등장하는 위치를 dic[i]값에 저장
+for i in S:
+    if dic[i] == -1:
+        dic[i] = S.index(i)
+
+#value값 출력
+for i in dic:
+    print(dic[i], end=" ")
