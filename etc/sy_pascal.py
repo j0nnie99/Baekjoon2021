@@ -10,4 +10,21 @@ for i in range(n): #list를 n번 출력
     list=newlist #list를 새롭게 만들어낸 newlist로 갱신 => 이후 4번째 줄의 print(list)를 통해 출력
     #print(list)가 하단에 있으면 초기 리스트인 [1] 출력이 생략되므로 최상단에서 출력 한번 하고 나서, 연산 들어감
 
-    
+#시작: list = [1]
+#→ newlist = [list[0]] = [1]
+#for문 range가 0이니까 패스
+#newlist.append(list[-1]) = newlist.append(1)
+#(지금 원소가 하나니까 처음이자 마지막 원소가 1)
+#newlist = [1, 1]
+#list = newlist = [1,1]
+
+#list = [1,1]
+#newlist = [1]  #다시 초기화되고 list[0] 값이 들어감
+#- for문 (한번 수행, len(list)-1이 1이니까)
+#newlist.append(list[0] + list[1])
+#= newlist.append(1+1)
+#newlist = [1,2]
+#——for문 끝——
+#newlist.append(list[-1]) = newlist.append(1)
+#newlist = [1,2,1]
+#list = newlist = [1,2,1]
